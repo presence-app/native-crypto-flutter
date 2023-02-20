@@ -13,6 +13,7 @@ import 'package:native_crypto/src/platform.dart';
 import 'package:native_crypto/src/utils/extensions.dart';
 import 'package:native_crypto_platform_interface/native_crypto_platform_interface.dart';
 
+
 /// Defines the hash algorithms.
 enum HashAlgorithm {
   sha256,
@@ -27,7 +28,7 @@ enum HashAlgorithm {
     } catch (e, s) {
       throw NativeCryptoException(
         message: '$e',
-        code: NativeCryptoExceptionCode.platform_throws.code,
+      //  code: NativeCryptoExceptionCode.platform_throws.code,
         stackTrace: s,
       );
     }
@@ -35,14 +36,14 @@ enum HashAlgorithm {
     if (hash.isNull) {
       throw NativeCryptoException(
         message: 'Failed to digest data! Platform returned null.',
-        code: NativeCryptoExceptionCode.platform_returned_null.code,
+      //  code: NativeCryptoExceptionCode.platform_returned_null.code,
       );
     }
 
     if (hash!.isEmpty) {
       throw NativeCryptoException(
         message: 'Failed to digest data! Platform returned no data.',
-        code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
+      //  code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
       );
     }
 

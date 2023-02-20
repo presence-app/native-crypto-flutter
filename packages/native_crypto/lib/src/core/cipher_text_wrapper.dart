@@ -111,7 +111,7 @@ class CipherTextWrapper {
     } else {
       throw NativeCryptoException(
         message: 'CipherTextWrapper is not single',
-        code: NativeCryptoExceptionCode.invalid_data.code,
+      //  code: NativeCryptoExceptionCode.invalid_data.code,
       );
     }
   }
@@ -126,7 +126,7 @@ class CipherTextWrapper {
     } else {
       throw NativeCryptoException(
         message: 'CipherTextWrapper is not list',
-        code: NativeCryptoExceptionCode.invalid_data.code,
+     //   code: NativeCryptoExceptionCode.invalid_data.code,
       );
     }
   }
@@ -168,7 +168,7 @@ class CipherTextWrapper {
       throw NativeCryptoException(
         message: 'CipherTextWrapper is not a $T but a $type, '
             'you should use unwrap<$type>()',
-        code: NativeCryptoExceptionCode.invalid_data.code,
+      //  code: NativeCryptoExceptionCode.invalid_data.code,
       );
     }
   }
@@ -177,14 +177,14 @@ class CipherTextWrapper {
     if (isSingle) {
       throw NativeCryptoException(
         message: 'CipherTextWrapper is already single',
-        code: NativeCryptoExceptionCode.invalid_data.code,
+        //  code: NativeCryptoExceptionCode.invalid_data.code,
       );
     } else if (isList) {
       _list!.add(cipherText);
     } else {
       throw NativeCryptoException(
         message: 'CipherTextWrapper is not single or list',
-        code: NativeCryptoExceptionCode.invalid_data.code,
+     //   code: NativeCryptoExceptionCode.invalid_data.code,
       );
     }
   }

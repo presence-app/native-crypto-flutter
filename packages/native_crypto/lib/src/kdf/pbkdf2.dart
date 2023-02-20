@@ -39,14 +39,14 @@ class Pbkdf2 extends KeyDerivation {
     if (keyBytesCount < 0) {
       throw NativeCryptoException(
         message: 'keyBytesCount must be positive.',
-        code: NativeCryptoExceptionCode.invalid_argument.code,
+      //  code: NativeCryptoExceptionCode.invalid_argument.code,
       );
     }
 
     if (iterations <= 0) {
       throw NativeCryptoException(
         message: 'iterations must be strictly positive.',
-        code: NativeCryptoExceptionCode.invalid_argument.code,
+      //  code: NativeCryptoExceptionCode.invalid_argument.code,
       );
     }
   }
@@ -61,14 +61,14 @@ class Pbkdf2 extends KeyDerivation {
     if (password.isNull) {
       throw NativeCryptoException(
         message: 'Password cannot be null.',
-        code: NativeCryptoExceptionCode.invalid_argument.code,
+      //  code: NativeCryptoExceptionCode.invalid_argument.code,
       );
     }
 
     if (salt.isNull) {
       throw NativeCryptoException(
         message: 'Salt cannot be null.',
-        code: NativeCryptoExceptionCode.invalid_argument.code,
+      //  code: NativeCryptoExceptionCode.invalid_argument.code,
       );
     }
 
@@ -83,7 +83,7 @@ class Pbkdf2 extends KeyDerivation {
     } catch (e, s) {
       throw NativeCryptoException(
         message: '$e',
-        code: NativeCryptoExceptionCode.platform_throws.code,
+      //  code: NativeCryptoExceptionCode.platform_throws.code,
         stackTrace: s,
       );
     }
@@ -91,14 +91,14 @@ class Pbkdf2 extends KeyDerivation {
     if (derivation.isNull) {
       throw NativeCryptoException(
         message: 'Failed to derive a key! Platform returned null.',
-        code: NativeCryptoExceptionCode.platform_returned_null.code,
+      //  code: NativeCryptoExceptionCode.platform_returned_null.code,
       );
     }
 
     if (derivation!.isEmpty) {
       throw NativeCryptoException(
         message: 'Failed to derive a key! Platform returned no data.',
-        code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
+     //   code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
       );
     }
 
@@ -106,7 +106,7 @@ class Pbkdf2 extends KeyDerivation {
       throw NativeCryptoException(
         message: 'Failed to derive a key! Platform returned '
             '${derivation.length} bytes, but expected $_keyBytesCount bytes.',
-        code: NativeCryptoExceptionCode.platform_returned_invalid_data.code,
+      //  code: NativeCryptoExceptionCode.platform_returned_invalid_data.code,
       );
     }
 

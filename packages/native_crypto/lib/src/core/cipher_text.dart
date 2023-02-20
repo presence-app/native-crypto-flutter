@@ -58,14 +58,14 @@ class CipherText extends ByteArray {
         tagLength.isNegative) {
       throw NativeCryptoException(
         message: 'Invalid length! Must be positive.',
-        code: NativeCryptoExceptionCode.invalid_argument.code,
+      //  code: NativeCryptoExceptionCode.invalid_argument.code,
       );
     }
 
     if (bytes.isEmpty) {
       throw NativeCryptoException(
         message: 'Passed data is empty!',
-        code: NativeCryptoExceptionCode.invalid_argument.code,
+     //  code: NativeCryptoExceptionCode.invalid_argument.code,
       );
     }
 
@@ -74,14 +74,14 @@ class CipherText extends ByteArray {
         message: 'Invalid cipher text length! '
             'Expected: ${ivLength + messageLength + tagLength} bytes '
             'got: ${bytes.length} bytes.',
-        code: NativeCryptoExceptionCode.invalid_argument.code,
+      //  code: NativeCryptoExceptionCode.invalid_argument.code,
       );
     }
 
     if (messageLength > Cipher.bytesCountPerChunk) {
       throw NativeCryptoException(
         message: 'Cipher text is too big! Consider using chunks.',
-        code: NativeCryptoExceptionCode.invalid_argument.code,
+     //   code: NativeCryptoExceptionCode.invalid_argument.code,
       );
     }
 
@@ -101,7 +101,7 @@ class CipherText extends ByteArray {
     } else {
       throw NativeCryptoException(
         message: 'Cipher algorithm is not specified',
-        code: NativeCryptoExceptionCode.invalid_cipher.code,
+      //  code: NativeCryptoExceptionCode.invalid_cipher.code,
       );
     }
   }

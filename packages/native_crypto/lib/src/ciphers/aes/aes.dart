@@ -42,7 +42,7 @@ class AES implements Cipher {
       throw NativeCryptoException(
         message: 'Invalid key size! '
             'Expected: ${AESKeySize.supportedSizes.join(', ')} bits',
-        code: NativeCryptoExceptionCode.invalid_key_length.code,
+      //  code: NativeCryptoExceptionCode.invalid_key_length.code,
       );
     }
 
@@ -50,7 +50,7 @@ class AES implements Cipher {
       throw NativeCryptoException(
         message: 'Invalid padding! '
             'Expected: ${mode.supportedPaddings.join(', ')}',
-        code: NativeCryptoExceptionCode.invalid_padding.code,
+     //   code: NativeCryptoExceptionCode.invalid_padding.code,
       );
     }
   }
@@ -70,7 +70,7 @@ class AES implements Cipher {
     } catch (e, s) {
       throw NativeCryptoException(
         message: '$e',
-        code: NativeCryptoExceptionCode.platform_throws.code,
+      //  code: NativeCryptoExceptionCode.platform_throws.code,
         stackTrace: s,
       );
     }
@@ -78,12 +78,12 @@ class AES implements Cipher {
     if (decrypted.isNull) {
       throw NativeCryptoException(
         message: 'Platform returned null when decrypting chunk #$chunkCount',
-        code: NativeCryptoExceptionCode.platform_returned_null.code,
+      //  code: NativeCryptoExceptionCode.platform_returned_null.code,
       );
     } else if (decrypted!.isEmpty) {
       throw NativeCryptoException(
         message: 'Platform returned no data when decrypting chunk #$chunkCount',
-        code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
+     //   code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
       );
     } else {
       return decrypted;
@@ -102,7 +102,7 @@ class AES implements Cipher {
     } catch (e, s) {
       throw NativeCryptoException(
         message: '$e on chunk #$chunkCount',
-        code: NativeCryptoExceptionCode.platform_throws.code,
+     //   code: NativeCryptoExceptionCode.platform_throws.code,
         stackTrace: s,
       );
     }
@@ -110,12 +110,12 @@ class AES implements Cipher {
     if (encrypted.isNull) {
       throw NativeCryptoException(
         message: 'Platform returned null when encrypting chunk #$chunkCount',
-        code: NativeCryptoExceptionCode.platform_returned_null.code,
+     //   code: NativeCryptoExceptionCode.platform_returned_null.code,
       );
     } else if (encrypted!.isEmpty) {
       throw NativeCryptoException(
         message: 'Platform returned no data when encrypting chunk #$chunkCount',
-        code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
+     //  code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
       );
     } else {
       try {

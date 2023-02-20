@@ -37,14 +37,14 @@ class SecretKey extends BaseKey {
     } catch (e, s) {
       throw NativeCryptoException(
         message: '$e',
-        code: NativeCryptoExceptionCode.platform_throws.code,
+      //  code: NativeCryptoExceptionCode.platform_throws.code,
         stackTrace: s,
       );
     }
     if (key.isNull) {
       throw NativeCryptoException(
         message: 'Failed to generate a secret key! Platform returned null.',
-        code: NativeCryptoExceptionCode.platform_returned_null.code,
+      //  code: NativeCryptoExceptionCode.platform_returned_null.code,
       );
     }
 
@@ -52,7 +52,7 @@ class SecretKey extends BaseKey {
       throw NativeCryptoException(
         message: 'Failed to generate a secret key! '
             'Platform returned no data.',
-        code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
+      //  code: NativeCryptoExceptionCode.platform_returned_empty_data.code,
       );
     }
     return SecretKey(key);
