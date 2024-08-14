@@ -15,7 +15,7 @@ dependencies:
   native_crypto_android:
     git:
       url: https://github.com/hugo-pcl/native-crypto-flutter.git
-      ref: native_crypto_android-v0.1.1
+      ref: native_crypto_android-v0.1.2
       path: packages/native_crypto_android
   
   native_crypto_ios:
