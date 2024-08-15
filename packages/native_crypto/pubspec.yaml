@@ -1,6 +1,6 @@
 name: native_crypto
 description: Fast and secure cryptography for Flutter.
-version: 0.1.2
+version: 0.1.1
 
 publish_to: 'none'
 
@@ -15,7 +15,7 @@ dependencies:
   native_crypto_android:
     git:
       url: https://github.com/hugo-pcl/native-crypto-flutter.git
-      ref: native_crypto_android-v0.1.2
+      ref: native_crypto_android-v0.1.1
       path: packages/native_crypto_android
   
   native_crypto_ios:
@@ -35,7 +35,7 @@ dev_dependencies:
     sdk: flutter
 
   mockito: ^5.2.0
-  plugin_platform_interface: ^2.1.8
+  plugin_platform_interface: ^2.1.2
 
   wyatt_analysis:
     git:
