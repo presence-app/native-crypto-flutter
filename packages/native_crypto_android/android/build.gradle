@@ -25,6 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace = "fr.pointcheval.native_crypto_android"
     compileSdkVersion 34
 
     compileOptions {
