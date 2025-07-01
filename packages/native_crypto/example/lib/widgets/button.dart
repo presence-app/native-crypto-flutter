@@ -20,7 +20,7 @@ class Button extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: TextButton.styleFrom(
-        primary: Colors.blue,
+        foregroundColor: Colors.blue,
       ),
       child: Text(
         label,
