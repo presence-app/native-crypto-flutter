@@ -4,11 +4,17 @@ plugins {
 }
 
 android {
-    namespace "fr.pointcheval.native_crypto_android"
-    compileSdk 34
+    namespace 'fr.pointcheval.native_crypto_android'
+    compileSdk 35
+
+    // Add this temporarily
+    buildFeatures {
+        buildConfig true
+    }
 
     defaultConfig {
         minSdk 26
+        targetSdk 35
         consumerProguardFiles "consumer-rules.pro"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
