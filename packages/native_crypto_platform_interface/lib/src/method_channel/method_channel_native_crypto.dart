@@ -9,6 +9,7 @@
 
 import 'dart:typed_data';
 
+import 'package:meta/meta.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:native_crypto_platform_interface/native_crypto_platform_interface.dart';
